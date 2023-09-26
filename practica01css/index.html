@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./Style.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>Práctica 01 HTML + CSS</title>
 </head>
 <body>
     <header>
         <img src="./img/resplandor.png" alt="fondo">
-        <img src="./img/logo.png" alt="logo empresa">
+        <img src="./img/logo.png" alt="logo empresa" id="logo">
         <nav class="nav">
             <ul>
                 <li>Inicio</li>
@@ -20,23 +20,23 @@
                 <li>Sección</li>
             </ul>
             <form action="#">
-                <input type="text" placeholder="Buscar aquí...">
+                <input type="text" placeholder="Buscar aquí..." >
                 <input type="submit" value="Buscar">
             </form>
         </nav>
     </header>
 
-    <section>
+    <section id="seccion01">
         <article>
             <img src="./img/slide2.jpg" alt="Banner">
         </article>
     </section>
 
-    <section>
+    <section id="seccion02">
         <article>
             <img src="./img/separador.jpg" alt="separador">
             <br>
-            Una Sección
+            <span class="unaSeccion nito"> Una Sección</span> 
             <br>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             Velit voluptate magnam ducimus eligendi culpa, dignissimos 
@@ -47,7 +47,8 @@
         </article>
         <article>
             <img src="./img/separador.jpg" alt="separador">
-            Otra Sección
+            <br>
+            <span class="otraSeccion nito"> Otra Sección </span>
             <br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Sint tempora itaque, doloribus quidem labore blanditiis 
@@ -59,7 +60,7 @@
         <article>
             <img src="./img/separador.jpg" alt="separador">
             <br>
-            Un video 
+            <span class="otraSeccion nito"> Un vídeo</span>  
             <br>
             <img src="img/video.jpg" alt="video">
         </article>
