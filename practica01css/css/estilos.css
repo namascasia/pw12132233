@@ -5,24 +5,47 @@
     pseudoelementos*/
 body{
     font-size: 16px; /*1em*/
-    border: 1px solid red;
     margin: 0px auto;
     max-width: 1024px;
 }
-.nav {
-    padding: 5px;
-    color: white;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    background-color: #0070c6;
+
+header {
+    background-color: #d1e3ee;
 }
 
-.nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+header nav {
+    background-color: #026dc6;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding: 2px 0px; /*Parametros arriba-abajo, derecha-izquierda*/
+    width: 99%;
+}
+
+header nav ul li {
+    display: inline-block;
+    color: white;
+    margin-right: 20px;
+}
+
+header nav form {
+    float: right;
+    margin-right: 20px;
+    margin-top: -35px;
+}
+
+header nav form input {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+header nav form input[type="submit"]{
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+header nav form input[type="text"]{
+    border: 1px solid white;
 }
 
 .nito{
@@ -30,5 +53,18 @@ body{
 }
 
 #logo{
-    position: absolute;
+    margin-top: -150px;
+}
+
+#seccion01{
+    margin-top: 15px;
+}
+
+#seccion01 article{
+    text-align: center;
+}
+
+#seccion01 article img{
+    border: 5px solid rgba(150, 150, 150, 0.5);
+    width: 98%;
 }
