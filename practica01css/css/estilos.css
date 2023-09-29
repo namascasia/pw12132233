@@ -48,9 +48,6 @@ header nav form input[type="text"]{
     border: 1px solid white;
 }
 
-.nito{
-    font-weight: bold;
-}
 
 #logo{
     margin-top: -150px;
@@ -59,7 +56,9 @@ header nav form input[type="text"]{
 #seccion01{
     margin-top: 15px;
 }
-
+#seccion02{
+    margin-bottom: 50px;
+}
 #seccion01 article{
     text-align: center;
 }
@@ -67,4 +66,33 @@ header nav form input[type="text"]{
 #seccion01 article img{
     border: 5px solid rgba(150, 150, 150, 0.5);
     width: 98%;
+}
+
+#seccion02 article {
+    width: 32.0%;
+    vertical-align: top;
+    display: inline-block;
+    
+}
+
+#seccion02 article input[type="submit"]{
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+    padding: 8px;
+    /* display: block;
+    margin: 0px auto; */
+    margin-left: 125px; 
+}
+
+.unaSeccion {
+    font-size: 4.5em; /*<--- 16px * 4.5 -->*/
+}
+
+.otraSeccion {
+    font-size: 2.5em;  /*<--- 16px * 2.5 -->*/
+}
+
+.nito{
+    font-weight: bold;
 }
