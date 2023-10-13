@@ -4,11 +4,27 @@ body{
     margin: 0px auto;
 }
 
+footer article{
+    width: 31.1%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    padding:  10px;
+}
+
+footer img{
+    width: 300px;
+}
+
 header nav ul li {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 8px 14px;
     text-align: center;
     width: 17.0%;
+}
+
+header ul{
+    margin-left: -40px;
 }
 
 header nav ul li:nth-child(2){ /*El elemento n hijos*/
@@ -27,6 +43,70 @@ header nav ul li:nth-child(5){ /*El elemento n hijos*/
     background-color: lightgray;
 }
 
+hr{
+    color: #949494;
+    border-style: dashed;
+}
+
+section, footer{/*Seccion y footer. la coma es un 'y'*/
+    background-color: #2C2C2C;
+}
+
+section article{
+    width: 17.9%;
+    height: 280px;
+    padding: 18px 8px; /*arriba y abajo, derecha e izquierda. Mueve el texto dentro del article*/
+    vertical-align: top;
+    display: inline-block;
+}
+
+section article:nth-child(2){
+    background: #849C3C;
+}
+
+section article:nth-child(3){
+    background: #353535;
+}
+
+section article:nth-child(4){
+    background: #D33040;
+}
+
+section article:nth-child(5){
+    background: lightgray;
+}
+
+section article img{
+    width: 150px;
+}
+
+section article ul{
+    list-style: none;
+}
+
+section article ul li{
+    margin-bottom: 10px;
+}
+
+.letra-azul{
+    color: lightblue;
+}
 .letra-blanca{
     color: white;
+}
+
+.letra-gris{
+    color: #949494;
+}
+
+.tam-menu-lateral{
+    font-size: 1.1em;
+}
+
+.tam-tarjetas{
+    font-size: 1.7em;
+}
+
+.read-more{
+    float: right;
 }
