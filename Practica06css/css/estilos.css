@@ -13,9 +13,15 @@ header{
     font-family: tahoma;
 }
 
+header img{
+    padding-top: 14px;
+    margin-left: 9%;
+    vertical-align: bottom;
+}
+
 img[src="./img/logo-abstract.png"]{
-    width: 50px;
-    height: 45px;
+    width: 27px;
+    height: 27px;
 }
 
 img[src="./img/flecha.png"]{
@@ -28,7 +34,7 @@ footer{
     width: 100%;
     height: 380px;
     display: flex;
-    gap: 60px;
+    gap: 15px;
 }
 
 footer article{
@@ -42,7 +48,7 @@ footer article:nth-child(4){
 }
 
 footer article:nth-child(5){
-    margin-top: 190px;
+    margin-top: 150px;
 }
 
 ul li{
@@ -116,7 +122,7 @@ ul li{
 #Seccion01art01{
     width: 700px;
     height: 150px;
-    margin-left: 600px;
+    margin-left: 550px;
     padding-top: 70px;
 }
 
