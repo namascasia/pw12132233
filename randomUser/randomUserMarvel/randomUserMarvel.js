@@ -1,33 +1,39 @@
 let paginaActual = 0;
-let quantityPersonajes = 0;
 let personajes = [];
+let namePersonaje = '';
+// let quantityPersonajes = 0;
 
 const getPersonajes = async()=>{
-    quantityPersonajes = document.getElementById("cantidadPersonajes").value;
-    if(quantityPersonajes == 0) {
-        alert('Agregue una cantidad que quiera visualizar de personajes');
-        return;
-    }
-    const resp = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=67788e74df746a1523d8ebb504ee1008&hash=cf5ec9bfa5a156f031a69417cd0e012c&limit=${quantityPersonajes}`); 
+    // quantityPersonajes = document.getElementById("cantidadPersonajes").value;
+    // if(quantityPersonajes == 0) {
+    //     alert('Agregue una cantidad que quiera visualizar de personajes');
+    //     return;
+    // }
+    // const resp = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=67788e74df746a1523d8ebb504ee1008&hash=cf5ec9bfa5a156f031a69417cd0e012c&limit=${quantityPersonajes}`); 
+    namePersonaje = document.getElementById("namePersonaje").value;
+    const resp = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=67788e74df746a1523d8ebb504ee1008&hash=cf5ec9bfa5a156f031a69417cd0e012c&nameStartsWith=${namePersonaje}`);
     const {data} = await resp.json();
     personajes = data.results;
-    // console.log(personajes);
+    console.log(personajes);
     showPersonajes();
 }
 
 const previousPersonaje = () =>{
     paginaActual--;
     if(paginaActual < 0 ) {
-        paginaActual = quantityPersonajes - 1;
+        // paginaActual = quantityPersonajes - 1;
+        paginaActual = personajes.length -1;
     }
     // let previous = document.getElementById("previousPersonaje");
     // previous.innerText = `Prev ${paginaActual}`;
+    
     showPersonajes();
 }
 
 const nextPersonaje = () =>{
     paginaActual++;
-    if(paginaActual == quantityPersonajes ) {
+    // if(paginaActual == quantityPersonajes ) {
+    if(paginaActual == personajes.length ) {    
         paginaActual = 0;
     }
     // let next = document.getElementById("nextPersonaje");
@@ -44,5 +50,5 @@ const showPersonajes = () =>{
     image.setAttribute("src", personajes[paginaActual].thumbnail.path + "." + personajes[paginaActual].thumbnail.extension);
     name.innerHTML = personajes[paginaActual].name;
     description.innerHTML = personajes[paginaActual].description;
-    page.innerHTML = `${paginaActual + 1}/${quantityPersonajes}`;
+    page.innerHTML = `${paginaActual + 1}/${personajes.length}`;
 }
