@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px auto;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.containerActions{
+    padding-top: 50px;
+    align-items: center;
+}
+
+.containerActions input{
+    width: 70px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+.containerActions button{
+    width: 55px;
+    height: 30px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.containerInfo{
+    font-size: 1.2rem;
+    font-family: tahoma;  
+    text-align: center;
+}
+
+.containerInfo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}

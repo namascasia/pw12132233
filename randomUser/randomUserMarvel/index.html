@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random User for Marvel</title>
+    <link rel="stylesheet" href="./randomUserMarvel.css">
 </head>
 <body>
+    <section class="container">
+        <article class="containerActions">
+            <input type="number" id="cantidadPersonajes">
+            <button id="getPersonaje" onclick="getPersonajes();"> Get</button>
+            <button id="previousPersonaje" onclick="previousPersonaje();">Prev</button>
+            <button id="nextPersonaje" onclick="nextPersonaje();"> Next </button>
+        </article>
     
+        <article class="containerInfo" >
+            <img src="" alt="fotoPersonaje" id="fotoPersonaje"> <br>
+            <span id="name"></span> <br>
+            <span id="description"></span><br>
+        </article>
+    </section>
+    <script src="./randomUserMarvel.js"></script>
 </body>
 </html>
