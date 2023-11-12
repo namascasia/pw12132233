@@ -11,7 +11,7 @@ const getPersonajes = async()=>{
     // }
     // const resp = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=67788e74df746a1523d8ebb504ee1008&hash=cf5ec9bfa5a156f031a69417cd0e012c&limit=${quantityPersonajes}`); 
     namePersonaje = document.getElementById("namePersonaje").value;
-    const resp = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=67788e74df746a1523d8ebb504ee1008&hash=cf5ec9bfa5a156f031a69417cd0e012c&nameStartsWith=${namePersonaje}`);
+    const resp = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=67788e74df746a1523d8ebb504ee1008&hash=cf5ec9bfa5a156f031a69417cd0e012c&nameStartsWith=${namePersonaje}&limit=100`);
     const {data} = await resp.json();
     personajes = data.results;
     console.log(personajes);
@@ -46,9 +46,11 @@ const showPersonajes = () =>{
     let description = document.getElementById("description");
     let image = document.getElementById("fotoPersonaje");
     let page = document.getElementById("paginaActual");
+    let numberComics = document.getElementById("numberComics");
 
     image.setAttribute("src", personajes[paginaActual].thumbnail.path + "." + personajes[paginaActual].thumbnail.extension);
     name.innerHTML = personajes[paginaActual].name;
     description.innerHTML = personajes[paginaActual].description;
+    numberComics.innerHTML = "Number of comics available: " + personajes[paginaActual].comics.available;
     page.innerHTML = `${paginaActual + 1}/${personajes.length}`;
 }
